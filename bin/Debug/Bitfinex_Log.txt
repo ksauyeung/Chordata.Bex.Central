@@ -1,0 +1,24 @@
+[2/22/2018 5:19:40 AM] Bitfinex connected.
+[2/22/2018 5:59:36 AM] Bitfinex connected.
+[2/22/2018 11:54:06 AM] Bitfinex disconnected. Code 1006
+[2/22/2018 11:54:08 AM] Bitfinex connected.
+[2/22/2018 12:50:17 PM] Bitfinex disconnected. Code 1006
+[2/22/2018 12:50:21 PM] Bitfinex connected.
+[2/22/2018 1:23:03 PM] Bitfinex disconnected. Code 1006
+[2/22/2018 1:24:05 PM] Bitfinex connected.
+[2/22/2018 7:54:09 PM] Bitfinex disconnected. Code 1006
+[2/22/2018 7:54:12 PM] Bitfinex connected.
+[2/23/2018 2:54:23 AM] Bitfinex disconnected. Code 1006
+[2/23/2018 2:55:24 AM] Bitfinex connected.
+[2/23/2018 5:20:23 AM] Bitfinex disconnected. Code 1001
+[2/23/2018 5:20:27 AM] Bitfinex connected.
+[2/23/2018 6:49:30 AM] Bitfinex disconnected. Code 1006
+[2/23/2018 6:50:31 AM] Bitfinex connected.
+[2/23/2018 9:23:07 AM] Bitfinex disconnected. Code 1006
+[2/23/2018 9:23:11 AM] Bitfinex connected.
+[2/23/2018 6:54:22 PM] Bitfinex disconnected. Code 1006
+[2/23/2018 6:55:23 PM] Bitfinex connected.
+[2/23/2018 6:56:06 PM] Bitfinex connected.
+[3/25/2019 4:06:15 AM] Bitfinex connected.
+[3/25/2019 4:08:34 AM] Bitfinex disconnected. Code 1000
+[8/3/2022 6:29:19 PM] Bitfinex connected.

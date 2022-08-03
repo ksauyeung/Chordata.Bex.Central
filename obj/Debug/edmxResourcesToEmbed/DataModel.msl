@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TunaModelStoreContainer" CdmEntityContainer="Tuna">
+    <EntitySetMapping Name="APIs">
+      <EntityTypeMapping TypeName="IsTypeOf(TunaModel.API)">
+        <MappingFragment StoreEntitySet="APIs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="URL_API_1" ColumnName="URL_API_1" />
+          <ScalarProperty Name="URL_API_2" ColumnName="URL_API_2" />
+          <ScalarProperty Name="API_DEFAULT_KEY" ColumnName="API_DEFAULT_KEY" />
+          <ScalarProperty Name="API_DEFAULT_SECRET" ColumnName="API_DEFAULT_SECRET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

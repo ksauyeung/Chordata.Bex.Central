@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TunaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="API">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="URL_API_1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="URL_API_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="API_DEFAULT_KEY" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="API_DEFAULT_SECRET" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FIELD1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FIELD10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NUM1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="NUM10" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="DATE1" Type="DateTime" Precision="3" />
+    <Property Name="DATE2" Type="DateTime" Precision="3" />
+    <Property Name="ORDER1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="ORDER2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_COMPLETED" Type="DateTime" Precision="3" />
+    <Property Name="ENABLED" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="Tuna" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="APIs" EntityType="Self.API" />
+    <EntitySet Name="OPS" EntityType="Self.OP" />
+  </EntityContainer>
+</Schema>

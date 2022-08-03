@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TunaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="APIs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="URL_API_1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="URL_API_2" Type="varchar" MaxLength="100" />
+    <Property Name="API_DEFAULT_KEY" Type="varchar" MaxLength="256" />
+    <Property Name="API_DEFAULT_SECRET" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="OPS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FIELD1" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD2" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD3" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD4" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD5" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD6" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD7" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD8" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD9" Type="varchar" MaxLength="100" />
+    <Property Name="FIELD10" Type="varchar" MaxLength="100" />
+    <Property Name="NUM1" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM2" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM3" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM4" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM5" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM6" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM7" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM8" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM9" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="NUM10" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="DATE1" Type="datetime" />
+    <Property Name="DATE2" Type="datetime" />
+    <Property Name="ORDER1" Type="varchar" MaxLength="256" />
+    <Property Name="ORDER2" Type="varchar" MaxLength="256" />
+    <Property Name="LAST_COMPLETED" Type="datetime" />
+    <Property Name="ENABLED" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="TunaModelStoreContainer">
+    <EntitySet Name="APIs" EntityType="Self.APIs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OPS" EntityType="Self.OPS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

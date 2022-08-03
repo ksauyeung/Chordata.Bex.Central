@@ -1,0 +1,10 @@
+[2/22/2018 8:44:20 AM] OKCoin connected.
+[3/25/2019 3:55:30 AM] OKCoin connected.
+[3/25/2019 4:00:47 AM] OKCoin disconnected. Code 1006
+[3/25/2019 4:00:48 AM] OKCoin connected.
+[3/25/2019 4:05:48 AM] OKCoin disconnected. Code 1006
+[3/25/2019 4:05:51 AM] OKCoin connected.
+[3/25/2019 4:08:35 AM] OKCoin disconnected. Code 1000
+[8/3/2022 6:30:49 PM] OKCoin disconnected. Code 1006
+[8/3/2022 6:31:11 PM] OKCoin disconnected. Code 1006
+[8/3/2022 6:31:34 PM] OKCoin disconnected. Code 1006

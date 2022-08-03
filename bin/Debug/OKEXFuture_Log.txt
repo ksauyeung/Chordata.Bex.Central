@@ -1,0 +1,12 @@
+[4/1/2018 4:31:41 AM] OKEXFuture connected.
+[4/1/2018 4:36:47 AM] OKEXFuture disconnected. Code 1006
+[4/1/2018 4:36:48 AM] OKEXFuture connected.
+[4/1/2018 4:41:48 AM] OKEXFuture disconnected. Code 1006
+[4/1/2018 4:41:50 AM] OKEXFuture connected.
+[4/1/2018 4:46:50 AM] OKEXFuture disconnected. Code 1006
+[4/1/2018 4:47:50 AM] OKEXFuture connected.
+[4/1/2018 4:48:24 AM] OKEXFuture disconnected. Code 1000
+[3/25/2019 3:55:20 AM] OKEXFuture connected.
+[3/25/2019 4:00:24 AM] OKEXFuture disconnected. Code 1006
+[3/25/2019 4:00:25 AM] OKEXFuture connected.
+[3/25/2019 4:08:37 AM] OKEXFuture disconnected. Code 1000

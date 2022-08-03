@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TunaModelStoreContainer" CdmEntityContainer="Tuna">
+    <EntitySetMapping Name="APIs">
+      <EntityTypeMapping TypeName="TunaModel.API">
+        <MappingFragment StoreEntitySet="APIs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="URL_API_1" ColumnName="URL_API_1" />
+          <ScalarProperty Name="URL_API_2" ColumnName="URL_API_2" />
+          <ScalarProperty Name="API_DEFAULT_KEY" ColumnName="API_DEFAULT_KEY" />
+          <ScalarProperty Name="API_DEFAULT_SECRET" ColumnName="API_DEFAULT_SECRET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPS">
+      <EntityTypeMapping TypeName="TunaModel.OP">
+        <MappingFragment StoreEntitySet="OPS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="FIELD1" ColumnName="FIELD1" />
+          <ScalarProperty Name="FIELD2" ColumnName="FIELD2" />
+          <ScalarProperty Name="FIELD3" ColumnName="FIELD3" />
+          <ScalarProperty Name="FIELD4" ColumnName="FIELD4" />
+          <ScalarProperty Name="FIELD5" ColumnName="FIELD5" />
+          <ScalarProperty Name="FIELD6" ColumnName="FIELD6" />
+          <ScalarProperty Name="FIELD7" ColumnName="FIELD7" />
+          <ScalarProperty Name="FIELD8" ColumnName="FIELD8" />
+          <ScalarProperty Name="FIELD9" ColumnName="FIELD9" />
+          <ScalarProperty Name="FIELD10" ColumnName="FIELD10" />
+          <ScalarProperty Name="NUM1" ColumnName="NUM1" />
+          <ScalarProperty Name="NUM2" ColumnName="NUM2" />
+          <ScalarProperty Name="NUM3" ColumnName="NUM3" />
+          <ScalarProperty Name="NUM4" ColumnName="NUM4" />
+          <ScalarProperty Name="NUM5" ColumnName="NUM5" />
+          <ScalarProperty Name="NUM6" ColumnName="NUM6" />
+          <ScalarProperty Name="NUM7" ColumnName="NUM7" />
+          <ScalarProperty Name="NUM8" ColumnName="NUM8" />
+          <ScalarProperty Name="NUM9" ColumnName="NUM9" />
+          <ScalarProperty Name="NUM10" ColumnName="NUM10" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE1" />
+          <ScalarProperty Name="DATE2" ColumnName="DATE2" />
+          <ScalarProperty Name="ORDER1" ColumnName="ORDER1" />
+          <ScalarProperty Name="ORDER2" ColumnName="ORDER2" />
+          <ScalarProperty Name="LAST_COMPLETED" ColumnName="LAST_COMPLETED" />
+          <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

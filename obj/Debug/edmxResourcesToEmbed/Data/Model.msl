@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Tuna">
+    <EntitySetMapping Name="APIs">
+      <EntityTypeMapping TypeName="Model.API">
+        <MappingFragment StoreEntitySet="APIs">
+          <ScalarProperty Name="MaxReconnect" ColumnName="MaxReconnect" />
+          <ScalarProperty Name="HeartbeatInterval" ColumnName="HeartbeatInterval" />
+          <ScalarProperty Name="DefaultSecret" ColumnName="DefaultSecret" />
+          <ScalarProperty Name="DefaultKey" ColumnName="DefaultKey" />
+          <ScalarProperty Name="ApiUrl2" ColumnName="ApiUrl2" />
+          <ScalarProperty Name="ApiUrl1" ColumnName="ApiUrl1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPs">
+      <EntityTypeMapping TypeName="Model.OP">
+        <MappingFragment StoreEntitySet="OPs">
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="LastCompleted" ColumnName="LastCompleted" />
+          <ScalarProperty Name="Order4" ColumnName="Order4" />
+          <ScalarProperty Name="Order3" ColumnName="Order3" />
+          <ScalarProperty Name="Order2" ColumnName="Order2" />
+          <ScalarProperty Name="Order1" ColumnName="Order1" />
+          <ScalarProperty Name="Date4" ColumnName="Date4" />
+          <ScalarProperty Name="Date3" ColumnName="Date3" />
+          <ScalarProperty Name="Date2" ColumnName="Date2" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Num10" ColumnName="Num10" />
+          <ScalarProperty Name="Num9" ColumnName="Num9" />
+          <ScalarProperty Name="Num8" ColumnName="Num8" />
+          <ScalarProperty Name="Num7" ColumnName="Num7" />
+          <ScalarProperty Name="Num6" ColumnName="Num6" />
+          <ScalarProperty Name="Num5" ColumnName="Num5" />
+          <ScalarProperty Name="Num4" ColumnName="Num4" />
+          <ScalarProperty Name="Num3" ColumnName="Num3" />
+          <ScalarProperty Name="Num2" ColumnName="Num2" />
+          <ScalarProperty Name="Num1" ColumnName="Num1" />
+          <ScalarProperty Name="Text10" ColumnName="Text10" />
+          <ScalarProperty Name="Text9" ColumnName="Text9" />
+          <ScalarProperty Name="Text8" ColumnName="Text8" />
+          <ScalarProperty Name="Text7" ColumnName="Text7" />
+          <ScalarProperty Name="Text6" ColumnName="Text6" />
+          <ScalarProperty Name="Text5" ColumnName="Text5" />
+          <ScalarProperty Name="Text4" ColumnName="Text4" />
+          <ScalarProperty Name="Text3" ColumnName="Text3" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Symbols">
+      <EntityTypeMapping TypeName="Model.Symbol">
+        <MappingFragment StoreEntitySet="Symbols">
+          <ScalarProperty Name="DecimalPlace" ColumnName="DecimalPlace" />
+          <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="UnderlyingAsset" ColumnName="UnderlyingAsset" />
+          <ScalarProperty Name="IsQuoteFiat" ColumnName="IsQuoteFiat" />
+          <ScalarProperty Name="IsBaseFiat" ColumnName="IsBaseFiat" />
+          <ScalarProperty Name="QuoteCurrency" ColumnName="QuoteCurrency" />
+          <ScalarProperty Name="BaseCurrency" ColumnName="BaseCurrency" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="Model.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="FullyFilledDate" ColumnName="FullyFilledDate" />
+          <ScalarProperty Name="FilledDate" ColumnName="FilledDate" />
+          <ScalarProperty Name="ExecutionAmount" ColumnName="ExecutionAmount" />
+          <ScalarProperty Name="ExecutionPrice" ColumnName="ExecutionPrice" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Side" ColumnName="Side" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Runs">
+      <EntityTypeMapping TypeName="Model.Run">
+        <MappingFragment StoreEntitySet="Runs">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="Started" ColumnName="Started" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="Order6" ColumnName="Order6" />
+          <ScalarProperty Name="Order5" ColumnName="Order5" />
+          <ScalarProperty Name="Order4" ColumnName="Order4" />
+          <ScalarProperty Name="Order3" ColumnName="Order3" />
+          <ScalarProperty Name="Order2" ColumnName="Order2" />
+          <ScalarProperty Name="Order1" ColumnName="Order1" />
+          <ScalarProperty Name="Date8" ColumnName="Date8" />
+          <ScalarProperty Name="Date7" ColumnName="Date7" />
+          <ScalarProperty Name="Date6" ColumnName="Date6" />
+          <ScalarProperty Name="Date5" ColumnName="Date5" />
+          <ScalarProperty Name="Date4" ColumnName="Date4" />
+          <ScalarProperty Name="Date3" ColumnName="Date3" />
+          <ScalarProperty Name="Date2" ColumnName="Date2" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Num20" ColumnName="Num20" />
+          <ScalarProperty Name="Num19" ColumnName="Num19" />
+          <ScalarProperty Name="Num18" ColumnName="Num18" />
+          <ScalarProperty Name="Num17" ColumnName="Num17" />
+          <ScalarProperty Name="Num16" ColumnName="Num16" />
+          <ScalarProperty Name="Num15" ColumnName="Num15" />
+          <ScalarProperty Name="Num14" ColumnName="Num14" />
+          <ScalarProperty Name="Num13" ColumnName="Num13" />
+          <ScalarProperty Name="Num12" ColumnName="Num12" />
+          <ScalarProperty Name="Num11" ColumnName="Num11" />
+          <ScalarProperty Name="Num10" ColumnName="Num10" />
+          <ScalarProperty Name="Num9" ColumnName="Num9" />
+          <ScalarProperty Name="Num8" ColumnName="Num8" />
+          <ScalarProperty Name="Num7" ColumnName="Num7" />
+          <ScalarProperty Name="Num6" ColumnName="Num6" />
+          <ScalarProperty Name="Num5" ColumnName="Num5" />
+          <ScalarProperty Name="Num4" ColumnName="Num4" />
+          <ScalarProperty Name="Num3" ColumnName="Num3" />
+          <ScalarProperty Name="Num2" ColumnName="Num2" />
+          <ScalarProperty Name="Num1" ColumnName="Num1" />
+          <ScalarProperty Name="Text15" ColumnName="Text15" />
+          <ScalarProperty Name="Text14" ColumnName="Text14" />
+          <ScalarProperty Name="Text13" ColumnName="Text13" />
+          <ScalarProperty Name="Text12" ColumnName="Text12" />
+          <ScalarProperty Name="Text11" ColumnName="Text11" />
+          <ScalarProperty Name="Text10" ColumnName="Text10" />
+          <ScalarProperty Name="Text9" ColumnName="Text9" />
+          <ScalarProperty Name="Text8" ColumnName="Text8" />
+          <ScalarProperty Name="Text7" ColumnName="Text7" />
+          <ScalarProperty Name="Text6" ColumnName="Text6" />
+          <ScalarProperty Name="Text5" ColumnName="Text5" />
+          <ScalarProperty Name="Text4" ColumnName="Text4" />
+          <ScalarProperty Name="Text3" ColumnName="Text3" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="OpId" ColumnName="OpId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarketHistories">
+      <EntityTypeMapping TypeName="Model.MarketHistory">
+        <MappingFragment StoreEntitySet="MarketHistory">
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="AskSz9" ColumnName="AskSz9" />
+          <ScalarProperty Name="AskSz8" ColumnName="AskSz8" />
+          <ScalarProperty Name="AskSz7" ColumnName="AskSz7" />
+          <ScalarProperty Name="AskSz6" ColumnName="AskSz6" />
+          <ScalarProperty Name="AskSz5" ColumnName="AskSz5" />
+          <ScalarProperty Name="AskSz4" ColumnName="AskSz4" />
+          <ScalarProperty Name="AskSz3" ColumnName="AskSz3" />
+          <ScalarProperty Name="AskSz2" ColumnName="AskSz2" />
+          <ScalarProperty Name="AskSz1" ColumnName="AskSz1" />
+          <ScalarProperty Name="AskSz0" ColumnName="AskSz0" />
+          <ScalarProperty Name="AskPx9" ColumnName="AskPx9" />
+          <ScalarProperty Name="AskPx8" ColumnName="AskPx8" />
+          <ScalarProperty Name="AskPx7" ColumnName="AskPx7" />
+          <ScalarProperty Name="AskPx6" ColumnName="AskPx6" />
+          <ScalarProperty Name="AskPx5" ColumnName="AskPx5" />
+          <ScalarProperty Name="AskPx4" ColumnName="AskPx4" />
+          <ScalarProperty Name="AskPx3" ColumnName="AskPx3" />
+          <ScalarProperty Name="AskPx2" ColumnName="AskPx2" />
+          <ScalarProperty Name="AskPx1" ColumnName="AskPx1" />
+          <ScalarProperty Name="AskPx0" ColumnName="AskPx0" />
+          <ScalarProperty Name="BidSz9" ColumnName="BidSz9" />
+          <ScalarProperty Name="BidSz8" ColumnName="BidSz8" />
+          <ScalarProperty Name="BidSz7" ColumnName="BidSz7" />
+          <ScalarProperty Name="BidSz6" ColumnName="BidSz6" />
+          <ScalarProperty Name="BidSz5" ColumnName="BidSz5" />
+          <ScalarProperty Name="BidSz4" ColumnName="BidSz4" />
+          <ScalarProperty Name="BidSz3" ColumnName="BidSz3" />
+          <ScalarProperty Name="BidSz2" ColumnName="BidSz2" />
+          <ScalarProperty Name="BidSz1" ColumnName="BidSz1" />
+          <ScalarProperty Name="BidSz0" ColumnName="BidSz0" />
+          <ScalarProperty Name="BidPx9" ColumnName="BidPx9" />
+          <ScalarProperty Name="BidPx8" ColumnName="BidPx8" />
+          <ScalarProperty Name="BidPx7" ColumnName="BidPx7" />
+          <ScalarProperty Name="BidPx6" ColumnName="BidPx6" />
+          <ScalarProperty Name="BidPx5" ColumnName="BidPx5" />
+          <ScalarProperty Name="BidPx4" ColumnName="BidPx4" />
+          <ScalarProperty Name="BidPx3" ColumnName="BidPx3" />
+          <ScalarProperty Name="BidPx2" ColumnName="BidPx2" />
+          <ScalarProperty Name="BidPx1" ColumnName="BidPx1" />
+          <ScalarProperty Name="BidPx0" ColumnName="BidPx0" />
+          <ScalarProperty Name="TickerPrice" ColumnName="TickerPrice" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Tuna" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="APIs" EntityType="Model.API" />
+    <EntitySet Name="OPs" EntityType="Model.OP" />
+    <EntitySet Name="Symbols" EntityType="Model.Symbol" />
+    <EntitySet Name="Orders" EntityType="Model.Order" />
+    <EntitySet Name="Runs" EntityType="Model.Run" />
+    <EntitySet Name="MarketHistories" EntityType="Model.MarketHistory" />
+  </EntityContainer>
+  <EntityType Name="API">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApiUrl1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ApiUrl2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DefaultKey" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="DefaultSecret" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="HeartbeatInterval" Type="Int32" />
+    <Property Name="MaxReconnect" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Num1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num10" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Date1" Type="DateTime" Precision="3" />
+    <Property Name="Date2" Type="DateTime" Precision="3" />
+    <Property Name="Date3" Type="DateTime" Precision="3" />
+    <Property Name="Date4" Type="DateTime" Precision="3" />
+    <Property Name="Order1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order4" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="LastCompleted" Type="DateTime" Precision="3" />
+    <Property Name="Enabled" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Symbol">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BaseCurrency" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="QuoteCurrency" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="IsBaseFiat" Type="Boolean" />
+    <Property Name="IsQuoteFiat" Type="Boolean" />
+    <Property Name="UnderlyingAsset" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Enabled" Type="Boolean" />
+    <Property Name="ExchangeId" Type="Int32" />
+    <Property Name="DecimalPlace" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" ConcurrencyMode="None" />
+    <Property Name="OrderId" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="OrderType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Side" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ExecutionPrice" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="ExecutionAmount" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="FilledDate" Type="DateTime" Precision="3" />
+    <Property Name="FullyFilledDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Run">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OpId" Type="Int32" Nullable="false" />
+    <Property Name="Text1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text11" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text12" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text13" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text14" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text15" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Num1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num10" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num11" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num12" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num13" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num14" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num15" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num16" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num17" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num18" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num19" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Num20" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Date1" Type="DateTime" Precision="3" />
+    <Property Name="Date2" Type="DateTime" Precision="3" />
+    <Property Name="Date3" Type="DateTime" Precision="3" />
+    <Property Name="Date4" Type="DateTime" Precision="3" />
+    <Property Name="Date5" Type="DateTime" Precision="3" />
+    <Property Name="Date6" Type="DateTime" Precision="3" />
+    <Property Name="Date7" Type="DateTime" Precision="3" />
+    <Property Name="Date8" Type="DateTime" Precision="3" />
+    <Property Name="Order1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order4" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order5" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Order6" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Progress" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Started" Type="DateTime" Precision="3" />
+    <Property Name="Completed" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MarketHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Symbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TickerPrice" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx0" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidPx9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz0" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="BidSz9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx0" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskPx9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz0" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz1" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz2" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz3" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz4" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz5" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz6" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz7" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz8" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="AskSz9" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

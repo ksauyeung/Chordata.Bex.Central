@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APIs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApiUrl1" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApiUrl2" Type="varchar" MaxLength="100" />
+          <Property Name="DefaultKey" Type="varchar" MaxLength="256" />
+          <Property Name="DefaultSecret" Type="varchar" MaxLength="256" />
+          <Property Name="HeartbeatInterval" Type="int" />
+          <Property Name="MaxReconnect" Type="int" />
+        </EntityType>
+        <EntityType Name="MarketHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Exchange" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Symbol" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TickerPrice" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx0" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz0" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx0" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz0" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Timestamp" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OPs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Text1" Type="varchar" MaxLength="100" />
+          <Property Name="Text2" Type="varchar" MaxLength="100" />
+          <Property Name="Text3" Type="varchar" MaxLength="100" />
+          <Property Name="Text4" Type="varchar" MaxLength="100" />
+          <Property Name="Text5" Type="varchar" MaxLength="100" />
+          <Property Name="Text6" Type="varchar" MaxLength="100" />
+          <Property Name="Text7" Type="varchar" MaxLength="100" />
+          <Property Name="Text8" Type="varchar" MaxLength="100" />
+          <Property Name="Text9" Type="varchar" MaxLength="100" />
+          <Property Name="Text10" Type="varchar" MaxLength="100" />
+          <Property Name="Num1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num10" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Date1" Type="datetime" />
+          <Property Name="Date2" Type="datetime" />
+          <Property Name="Date3" Type="datetime" />
+          <Property Name="Date4" Type="datetime" />
+          <Property Name="Order1" Type="varchar" MaxLength="256" />
+          <Property Name="Order2" Type="varchar" MaxLength="256" />
+          <Property Name="Order3" Type="varchar" MaxLength="256" />
+          <Property Name="Order4" Type="varchar" MaxLength="256" />
+          <Property Name="LastCompleted" Type="datetime" />
+          <Property Name="Enabled" Type="bit" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Exchange" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OrderId" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="OrderType" Type="varchar" MaxLength="50" />
+          <Property Name="Side" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Symbol" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExecutionPrice" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="ExecutionAmount" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="FilledDate" Type="datetime" />
+          <Property Name="FullyFilledDate" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="Comments" Type="text" />
+        </EntityType>
+        <EntityType Name="Runs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OpId" Type="int" Nullable="false" />
+          <Property Name="Text1" Type="varchar" MaxLength="100" />
+          <Property Name="Text2" Type="varchar" MaxLength="100" />
+          <Property Name="Text3" Type="varchar" MaxLength="100" />
+          <Property Name="Text4" Type="varchar" MaxLength="100" />
+          <Property Name="Text5" Type="varchar" MaxLength="100" />
+          <Property Name="Text6" Type="varchar" MaxLength="100" />
+          <Property Name="Text7" Type="varchar" MaxLength="100" />
+          <Property Name="Text8" Type="varchar" MaxLength="100" />
+          <Property Name="Text9" Type="varchar" MaxLength="100" />
+          <Property Name="Text10" Type="varchar" MaxLength="100" />
+          <Property Name="Text11" Type="varchar" MaxLength="100" />
+          <Property Name="Text12" Type="varchar" MaxLength="100" />
+          <Property Name="Text13" Type="varchar" MaxLength="100" />
+          <Property Name="Text14" Type="varchar" MaxLength="100" />
+          <Property Name="Text15" Type="varchar" MaxLength="100" />
+          <Property Name="Num1" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num2" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num3" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num4" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num5" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num6" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num7" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num8" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num9" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num10" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num11" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num12" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num13" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num14" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num15" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num16" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num17" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num18" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num19" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Num20" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="Date1" Type="datetime" />
+          <Property Name="Date2" Type="datetime" />
+          <Property Name="Date3" Type="datetime" />
+          <Property Name="Date4" Type="datetime" />
+          <Property Name="Date5" Type="datetime" />
+          <Property Name="Date6" Type="datetime" />
+          <Property Name="Date7" Type="datetime" />
+          <Property Name="Date8" Type="datetime" />
+          <Property Name="Order1" Type="varchar" MaxLength="256" />
+          <Property Name="Order2" Type="varchar" MaxLength="256" />
+          <Property Name="Order3" Type="varchar" MaxLength="256" />
+          <Property Name="Order4" Type="varchar" MaxLength="256" />
+          <Property Name="Order5" Type="varchar" MaxLength="256" />
+          <Property Name="Order6" Type="varchar" MaxLength="256" />
+          <Property Name="Progress" Type="varchar" MaxLength="15" />
+          <Property Name="Started" Type="datetime" />
+          <Property Name="Completed" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Message" Type="text" />
+        </EntityType>
+        <EntityType Name="Symbols">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Exchange" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BaseCurrency" Type="varchar" MaxLength="15" />
+          <Property Name="QuoteCurrency" Type="varchar" MaxLength="15" />
+          <Property Name="IsBaseFiat" Type="bit" />
+          <Property Name="IsQuoteFiat" Type="bit" />
+          <Property Name="ExchangeId" Type="int" />
+          <Property Name="UnderlyingAsset" Type="varchar" MaxLength="15" />
+          <Property Name="DecimalPlace" Type="int" />
+          <Property Name="Enabled" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="APIs" EntityType="Self.APIs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MarketHistory" EntityType="Self.MarketHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OPs" EntityType="Self.OPs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Runs" EntityType="Self.Runs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Symbols" EntityType="Self.Symbols" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Tuna" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APIs" EntityType="Model.API" />
+          <EntitySet Name="OPs" EntityType="Model.OP" />
+          <EntitySet Name="Symbols" EntityType="Model.Symbol" />
+          <EntitySet Name="Orders" EntityType="Model.Order" />
+          <EntitySet Name="Runs" EntityType="Model.Run" />
+          <EntitySet Name="MarketHistories" EntityType="Model.MarketHistory" />
+        </EntityContainer>
+        <EntityType Name="API">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApiUrl1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ApiUrl2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DefaultKey" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="DefaultSecret" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="HeartbeatInterval" Type="Int32" />
+          <Property Name="MaxReconnect" Type="Int32" />
+        </EntityType>
+        <EntityType Name="OP">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Num1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num10" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Date1" Type="DateTime" Precision="3" />
+          <Property Name="Date2" Type="DateTime" Precision="3" />
+          <Property Name="Date3" Type="DateTime" Precision="3" />
+          <Property Name="Date4" Type="DateTime" Precision="3" />
+          <Property Name="Order1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order4" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="LastCompleted" Type="DateTime" Precision="3" />
+          <Property Name="Enabled" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Symbol">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BaseCurrency" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="QuoteCurrency" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="IsBaseFiat" Type="Boolean" />
+          <Property Name="IsQuoteFiat" Type="Boolean" />
+          <Property Name="UnderlyingAsset" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Enabled" Type="Boolean" />
+          <Property Name="ExchangeId" Type="Int32" />
+          <Property Name="DecimalPlace" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" ConcurrencyMode="None" />
+          <Property Name="OrderId" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="OrderType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Side" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExecutionPrice" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="ExecutionAmount" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="FilledDate" Type="DateTime" Precision="3" />
+          <Property Name="FullyFilledDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Run">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OpId" Type="Int32" Nullable="false" />
+          <Property Name="Text1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text8" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text9" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text10" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text11" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text12" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text13" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text14" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Text15" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Num1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num10" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num11" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num12" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num13" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num14" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num15" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num16" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num17" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num18" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num19" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Num20" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Date1" Type="DateTime" Precision="3" />
+          <Property Name="Date2" Type="DateTime" Precision="3" />
+          <Property Name="Date3" Type="DateTime" Precision="3" />
+          <Property Name="Date4" Type="DateTime" Precision="3" />
+          <Property Name="Date5" Type="DateTime" Precision="3" />
+          <Property Name="Date6" Type="DateTime" Precision="3" />
+          <Property Name="Date7" Type="DateTime" Precision="3" />
+          <Property Name="Date8" Type="DateTime" Precision="3" />
+          <Property Name="Order1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order4" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order5" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order6" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Progress" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Started" Type="DateTime" Precision="3" />
+          <Property Name="Completed" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MarketHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Exchange" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Symbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TickerPrice" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx0" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidPx9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz0" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="BidSz9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx0" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskPx9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz0" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz1" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz2" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz3" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz4" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz5" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz6" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz7" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz8" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="AskSz9" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Tuna">
+          <EntitySetMapping Name="APIs">
+            <EntityTypeMapping TypeName="Model.API">
+              <MappingFragment StoreEntitySet="APIs">
+                <ScalarProperty Name="MaxReconnect" ColumnName="MaxReconnect" />
+                <ScalarProperty Name="HeartbeatInterval" ColumnName="HeartbeatInterval" />
+                <ScalarProperty Name="DefaultSecret" ColumnName="DefaultSecret" />
+                <ScalarProperty Name="DefaultKey" ColumnName="DefaultKey" />
+                <ScalarProperty Name="ApiUrl2" ColumnName="ApiUrl2" />
+                <ScalarProperty Name="ApiUrl1" ColumnName="ApiUrl1" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OPs">
+            <EntityTypeMapping TypeName="Model.OP">
+              <MappingFragment StoreEntitySet="OPs">
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="LastCompleted" ColumnName="LastCompleted" />
+                <ScalarProperty Name="Order4" ColumnName="Order4" />
+                <ScalarProperty Name="Order3" ColumnName="Order3" />
+                <ScalarProperty Name="Order2" ColumnName="Order2" />
+                <ScalarProperty Name="Order1" ColumnName="Order1" />
+                <ScalarProperty Name="Date4" ColumnName="Date4" />
+                <ScalarProperty Name="Date3" ColumnName="Date3" />
+                <ScalarProperty Name="Date2" ColumnName="Date2" />
+                <ScalarProperty Name="Date1" ColumnName="Date1" />
+                <ScalarProperty Name="Num10" ColumnName="Num10" />
+                <ScalarProperty Name="Num9" ColumnName="Num9" />
+                <ScalarProperty Name="Num8" ColumnName="Num8" />
+                <ScalarProperty Name="Num7" ColumnName="Num7" />
+                <ScalarProperty Name="Num6" ColumnName="Num6" />
+                <ScalarProperty Name="Num5" ColumnName="Num5" />
+                <ScalarProperty Name="Num4" ColumnName="Num4" />
+                <ScalarProperty Name="Num3" ColumnName="Num3" />
+                <ScalarProperty Name="Num2" ColumnName="Num2" />
+                <ScalarProperty Name="Num1" ColumnName="Num1" />
+                <ScalarProperty Name="Text10" ColumnName="Text10" />
+                <ScalarProperty Name="Text9" ColumnName="Text9" />
+                <ScalarProperty Name="Text8" ColumnName="Text8" />
+                <ScalarProperty Name="Text7" ColumnName="Text7" />
+                <ScalarProperty Name="Text6" ColumnName="Text6" />
+                <ScalarProperty Name="Text5" ColumnName="Text5" />
+                <ScalarProperty Name="Text4" ColumnName="Text4" />
+                <ScalarProperty Name="Text3" ColumnName="Text3" />
+                <ScalarProperty Name="Text2" ColumnName="Text2" />
+                <ScalarProperty Name="Text1" ColumnName="Text1" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Symbols">
+            <EntityTypeMapping TypeName="Model.Symbol">
+              <MappingFragment StoreEntitySet="Symbols">
+                <ScalarProperty Name="DecimalPlace" ColumnName="DecimalPlace" />
+                <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="UnderlyingAsset" ColumnName="UnderlyingAsset" />
+                <ScalarProperty Name="IsQuoteFiat" ColumnName="IsQuoteFiat" />
+                <ScalarProperty Name="IsBaseFiat" ColumnName="IsBaseFiat" />
+                <ScalarProperty Name="QuoteCurrency" ColumnName="QuoteCurrency" />
+                <ScalarProperty Name="BaseCurrency" ColumnName="BaseCurrency" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="Model.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="FullyFilledDate" ColumnName="FullyFilledDate" />
+                <ScalarProperty Name="FilledDate" ColumnName="FilledDate" />
+                <ScalarProperty Name="ExecutionAmount" ColumnName="ExecutionAmount" />
+                <ScalarProperty Name="ExecutionPrice" ColumnName="ExecutionPrice" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Side" ColumnName="Side" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Runs">
+            <EntityTypeMapping TypeName="Model.Run">
+              <MappingFragment StoreEntitySet="Runs">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Completed" ColumnName="Completed" />
+                <ScalarProperty Name="Started" ColumnName="Started" />
+                <ScalarProperty Name="Progress" ColumnName="Progress" />
+                <ScalarProperty Name="Order6" ColumnName="Order6" />
+                <ScalarProperty Name="Order5" ColumnName="Order5" />
+                <ScalarProperty Name="Order4" ColumnName="Order4" />
+                <ScalarProperty Name="Order3" ColumnName="Order3" />
+                <ScalarProperty Name="Order2" ColumnName="Order2" />
+                <ScalarProperty Name="Order1" ColumnName="Order1" />
+                <ScalarProperty Name="Date8" ColumnName="Date8" />
+                <ScalarProperty Name="Date7" ColumnName="Date7" />
+                <ScalarProperty Name="Date6" ColumnName="Date6" />
+                <ScalarProperty Name="Date5" ColumnName="Date5" />
+                <ScalarProperty Name="Date4" ColumnName="Date4" />
+                <ScalarProperty Name="Date3" ColumnName="Date3" />
+                <ScalarProperty Name="Date2" ColumnName="Date2" />
+                <ScalarProperty Name="Date1" ColumnName="Date1" />
+                <ScalarProperty Name="Num20" ColumnName="Num20" />
+                <ScalarProperty Name="Num19" ColumnName="Num19" />
+                <ScalarProperty Name="Num18" ColumnName="Num18" />
+                <ScalarProperty Name="Num17" ColumnName="Num17" />
+                <ScalarProperty Name="Num16" ColumnName="Num16" />
+                <ScalarProperty Name="Num15" ColumnName="Num15" />
+                <ScalarProperty Name="Num14" ColumnName="Num14" />
+                <ScalarProperty Name="Num13" ColumnName="Num13" />
+                <ScalarProperty Name="Num12" ColumnName="Num12" />
+                <ScalarProperty Name="Num11" ColumnName="Num11" />
+                <ScalarProperty Name="Num10" ColumnName="Num10" />
+                <ScalarProperty Name="Num9" ColumnName="Num9" />
+                <ScalarProperty Name="Num8" ColumnName="Num8" />
+                <ScalarProperty Name="Num7" ColumnName="Num7" />
+                <ScalarProperty Name="Num6" ColumnName="Num6" />
+                <ScalarProperty Name="Num5" ColumnName="Num5" />
+                <ScalarProperty Name="Num4" ColumnName="Num4" />
+                <ScalarProperty Name="Num3" ColumnName="Num3" />
+                <ScalarProperty Name="Num2" ColumnName="Num2" />
+                <ScalarProperty Name="Num1" ColumnName="Num1" />
+                <ScalarProperty Name="Text15" ColumnName="Text15" />
+                <ScalarProperty Name="Text14" ColumnName="Text14" />
+                <ScalarProperty Name="Text13" ColumnName="Text13" />
+                <ScalarProperty Name="Text12" ColumnName="Text12" />
+                <ScalarProperty Name="Text11" ColumnName="Text11" />
+                <ScalarProperty Name="Text10" ColumnName="Text10" />
+                <ScalarProperty Name="Text9" ColumnName="Text9" />
+                <ScalarProperty Name="Text8" ColumnName="Text8" />
+                <ScalarProperty Name="Text7" ColumnName="Text7" />
+                <ScalarProperty Name="Text6" ColumnName="Text6" />
+                <ScalarProperty Name="Text5" ColumnName="Text5" />
+                <ScalarProperty Name="Text4" ColumnName="Text4" />
+                <ScalarProperty Name="Text3" ColumnName="Text3" />
+                <ScalarProperty Name="Text2" ColumnName="Text2" />
+                <ScalarProperty Name="Text1" ColumnName="Text1" />
+                <ScalarProperty Name="OpId" ColumnName="OpId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MarketHistories">
+            <EntityTypeMapping TypeName="Model.MarketHistory">
+              <MappingFragment StoreEntitySet="MarketHistory">
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="AskSz9" ColumnName="AskSz9" />
+                <ScalarProperty Name="AskSz8" ColumnName="AskSz8" />
+                <ScalarProperty Name="AskSz7" ColumnName="AskSz7" />
+                <ScalarProperty Name="AskSz6" ColumnName="AskSz6" />
+                <ScalarProperty Name="AskSz5" ColumnName="AskSz5" />
+                <ScalarProperty Name="AskSz4" ColumnName="AskSz4" />
+                <ScalarProperty Name="AskSz3" ColumnName="AskSz3" />
+                <ScalarProperty Name="AskSz2" ColumnName="AskSz2" />
+                <ScalarProperty Name="AskSz1" ColumnName="AskSz1" />
+                <ScalarProperty Name="AskSz0" ColumnName="AskSz0" />
+                <ScalarProperty Name="AskPx9" ColumnName="AskPx9" />
+                <ScalarProperty Name="AskPx8" ColumnName="AskPx8" />
+                <ScalarProperty Name="AskPx7" ColumnName="AskPx7" />
+                <ScalarProperty Name="AskPx6" ColumnName="AskPx6" />
+                <ScalarProperty Name="AskPx5" ColumnName="AskPx5" />
+                <ScalarProperty Name="AskPx4" ColumnName="AskPx4" />
+                <ScalarProperty Name="AskPx3" ColumnName="AskPx3" />
+                <ScalarProperty Name="AskPx2" ColumnName="AskPx2" />
+                <ScalarProperty Name="AskPx1" ColumnName="AskPx1" />
+                <ScalarProperty Name="AskPx0" ColumnName="AskPx0" />
+                <ScalarProperty Name="BidSz9" ColumnName="BidSz9" />
+                <ScalarProperty Name="BidSz8" ColumnName="BidSz8" />
+                <ScalarProperty Name="BidSz7" ColumnName="BidSz7" />
+                <ScalarProperty Name="BidSz6" ColumnName="BidSz6" />
+                <ScalarProperty Name="BidSz5" ColumnName="BidSz5" />
+                <ScalarProperty Name="BidSz4" ColumnName="BidSz4" />
+                <ScalarProperty Name="BidSz3" ColumnName="BidSz3" />
+                <ScalarProperty Name="BidSz2" ColumnName="BidSz2" />
+                <ScalarProperty Name="BidSz1" ColumnName="BidSz1" />
+                <ScalarProperty Name="BidSz0" ColumnName="BidSz0" />
+                <ScalarProperty Name="BidPx9" ColumnName="BidPx9" />
+                <ScalarProperty Name="BidPx8" ColumnName="BidPx8" />
+                <ScalarProperty Name="BidPx7" ColumnName="BidPx7" />
+                <ScalarProperty Name="BidPx6" ColumnName="BidPx6" />
+                <ScalarProperty Name="BidPx5" ColumnName="BidPx5" />
+                <ScalarProperty Name="BidPx4" ColumnName="BidPx4" />
+                <ScalarProperty Name="BidPx3" ColumnName="BidPx3" />
+                <ScalarProperty Name="BidPx2" ColumnName="BidPx2" />
+                <ScalarProperty Name="BidPx1" ColumnName="BidPx1" />
+                <ScalarProperty Name="BidPx0" ColumnName="BidPx0" />
+                <ScalarProperty Name="TickerPrice" ColumnName="TickerPrice" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="Exchange" ColumnName="Exchange" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
